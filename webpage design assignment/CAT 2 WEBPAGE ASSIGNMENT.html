@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hansel Drip Fashion Store</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /*  how i will style my Body  */
+        body {
+            background: linear-gradient(to right, #885355, #6678ca);
+            color: #000000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            background-color: #333333;
+            color: rgb(27, 91, 110);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        /* Contact Details Section */
+        .contact-details {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-details h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product {
+            background: #fff;
+            border: 1px solid #8f8282;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+        }
+
+        /* Contact Form */
+        .form-section {
+            background: #ddd2d2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            display: inline-block;
+            background-color: #0085f1;
+            color: white;
+            padding: 10px 150px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ff5e62;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Hencil Drip fashion store </h1>
+        <p>we deliver and sell quality products world wide </p>
+    </header>
+
+    <!-- Contact & location Details -->
+    <section class="contact-details">
+        <h2>Contact & Location</h2>
+        <p><strong>Owner:</strong> Hencil</p>
+        <p><strong>Location:</strong> 347 machakos  Street, machakos town , 2nd floor juzadi plaza </p>
+        <p><strong>Phone:</strong> +254759701803</p>
+        <p><strong>Email:</strong> hanselchaviha2003@gmail.com</p>
+    </section>
+
+    <!-- Product Gallery -->
+    <section>
+        <h2 style="text-align: center; margin-bottom: 10px;"><marquee behaviour="scroll" direction="left" scrollamount="20">Our quality  Products</marquee></h2>
+        <div class="product-gallery">
+            <!-- Men hoodies  -->
+            <div class="product">
+                <img src="men hoodie.jpg" alt="men hoodie">
+                <h3>Men Hoodies Black</h3>
+                <p>Kshs 2,000.00</p>
+            </div>
+            <!-- Fashion shoes -->
+            <div class="product">
+                <img src="shoes.jpeg" alt="shoes">
+                <h3>Fashion Shoes</h3>
+                <p>Kshs 4,000.00</p>
+            </div>
+            <!-- DRIP Ice Chains -->
+            <div class="product">
+                <img src="ice chains.jpeg" alt="ice chains">
+                <h3>DRIP Ice Chains</h3>
+                <p>Kshs 20,000.00</p>
+            </div>
+            <!-- Add more products -->
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <h2>Enter similar product details that you want to buy from us, we wil compare and give you almost the same to what you ordered </h2>
+        <form action="#" method="POST">
+            <label for="product-name">Type of Product (Hoodie, Shoes, Ice Chains , T-shirts , Durag etc) You can also check some products 
+                from the link below.<br><br>
+                
+                <a href="https://drive.google.com/drive/folders/15mxQk8Wv6QW8GYPSxEQo9ICVVKDfGGrR?usp=drive_link">
+                    <bold>
+                        <h3>
+                            Link to access more product
+                        </h3>
+                    </bold></a>
+                <br><br> click the image, 
+                
+                copy link of the product from the google drive and paste here  for reviews and 
+                product processing :</label>
+            <input type="text" id="Type of Product" name="Type of Product" placeholder="Enter Type of Product" required>
+
+            <label for="product-image">Image link similar product :</label>
+            <input type="url" id="product-image" name="product-image" placeholder="Paste image URL here" required>
+
+            <label for="product-description">Description:</label>
+            <textarea id="product-description" name="product-description" rows="4" placeholder="Enter product description"></textarea>
+
+            <label for="Your email for feedback">Your email for feedback:</label>
+            <input type="text" id="Your email for feedback" name="Your email for feedback" placeholder="Enter Your email for feedback" required>
+
+            <label for="Your phone number">Your phone number:</label>
+            <input type="number" id="Your phone number" name="Your phone number" placeholder="Enter Your phone number" required>
+
+
+
+            <button type="button" onclick="showMessage()"><h3>SUBMIT</h3></button>
+            </form>
+        </section>
+    
+        <!-- JavaScript -->
+        <script>
+            function showMessage() {
+                alert("Thank you for contacting us we will reply to your contact information soon");
+            }
+        </script>
+    </body>
+    </html>
